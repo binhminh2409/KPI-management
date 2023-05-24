@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Data Example</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="data-container">
+    <p>Name: <span id="name"></span></p>
+    <p>Date: <span id="date"></span></p>
+    <p>Reach: <span id="reach"></span></p>
+    <progress id="reach-progress" value="0" max="100"></progress>
+    <p>Engagements: <span id="engagements"></span></p>
+    <progress id="engagements-progress" value="0" max="100"></progress>
+    <p>Page likes: <span id="page-likes"></span></p>
+    <progress id="page-likes-progress" value="0" max="100"></progress>
+  </div>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const name = urlParams.get('name');
+    const date = urlParams.get('date');
+    const reach = urlParams.get('reach');
+    const engagements = urlParams.get('engagements');
+    const pageLikes = urlParams.get('pageLikes');
+    const reachTarget = urlParams.get('reachTarget');
+    const engagementsTarget = urlParams.get('engagementsTarget');
+    const pageLikesTarget = urlParams.get('pageLikesTarget');
+
+    document.getElementById('name').textContent = name;
+    document.getElementById('date').textContent = date;
+
+    document.getElementById('reach').textContent = reach;
+    document.getElementById('reach-progress').value = reach;
+    document.getElementById('reach-progress').max = reachTarget;
+
+    document.getElementById('engagements').textContent = engagements;
+    document.getElementById('engagements-progress').value = engagements;
+    document.getElementById('engagements-progress').max = engagementsTarget;
+
+    document.getElementById('page-likes').textContent = pageLikes;
+    document.getElementById('page-likes-progress').value = pageLikes;
+    document.getElementById('page-likes-progress').max = pageLikesTarget;
+  </script>
+</body>
+</html>

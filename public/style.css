@@ -1,0 +1,30 @@
+progress {
+  width: 30%;
+  height: 20px;
+  border-radius: 10px;
+  appearance: none;
+}
+progress::-webkit-progress-bar {
+  background-color: #eee;
+  border-radius: 10px;
+}
+progress::-webkit-progress-value {
+  background-color: #007bff;
+  border-radius: 10px;
+}
+p {
+  margin-bottom: 5px;
+}
+.data-container, #page_data{
+  margin: 20px;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 10px;
+}
+.btn-submit, input, select {
+  border-radius: 10px;
+  margin: 10px auto;
+  border: 0px;
+  padding: 10px;
+  background-color: #eee;
+}
